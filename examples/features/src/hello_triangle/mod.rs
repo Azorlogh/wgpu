@@ -1,5 +1,6 @@
 use std::borrow::Cow;
 use winit::{
+    application::ApplicationHandler,
     event::{Event, WindowEvent},
     event_loop::EventLoop,
     window::Window,

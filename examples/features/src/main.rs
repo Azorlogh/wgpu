@@ -38,18 +38,18 @@ const EXAMPLES: &[ExampleDesc] = &[
         webgl: false, // No canvas for WebGL
         webgpu: true,
     },
-    ExampleDesc {
-        name: "hello_triangle",
-        function: wgpu_examples::hello_triangle::main,
-        webgl: true,
-        webgpu: true,
-    },
-    ExampleDesc {
-        name: "hello_windows",
-        function: wgpu_examples::hello_windows::main,
-        webgl: false,  // Native only example
-        webgpu: false, // Native only example
-    },
+    // ExampleDesc {
+    //     name: "hello_triangle",
+    //     function: wgpu_examples::hello_triangle::main,
+    //     webgl: true,
+    //     webgpu: true,
+    // },
+    // ExampleDesc {
+    //     name: "hello_windows",
+    //     function: wgpu_examples::hello_windows::main,
+    //     webgl: false,  // Native only example
+    //     webgpu: false, // Native only example
+    // },
     ExampleDesc {
         name: "hello_workgroups",
         function: wgpu_examples::hello_workgroups::main,
@@ -128,12 +128,12 @@ const EXAMPLES: &[ExampleDesc] = &[
         webgl: false,  // No canvas for WebGL
         webgpu: false, // No timestamp queries
     },
-    ExampleDesc {
-        name: "uniform_values",
-        function: wgpu_examples::uniform_values::main,
-        webgl: false, // No compute
-        webgpu: true,
-    },
+    // ExampleDesc {
+    //     name: "uniform_values",
+    //     function: wgpu_examples::uniform_values::main,
+    //     webgl: false, // No compute
+    //     webgpu: true,
+    // },
     ExampleDesc {
         name: "water",
         function: wgpu_examples::water::main,

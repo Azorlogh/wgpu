@@ -165,11 +165,11 @@ pub(crate) async fn get_adapter_with_capabilities_or_from_env(
     instance: &wgpu::Instance,
     required_features: &wgpu::Features,
     required_downlevel_capabilities: &wgpu::DownlevelCapabilities,
-    surface: &Option<&wgpu::Surface<'_>>,
+    surface: Option<&wgpu::Surface<'_>>,
 ) -> wgpu::Adapter {
     use wgpu::Backends;
     if std::env::var("WGPU_ADAPTER_NAME").is_ok() {
-        let adapter = wgpu::util::initialize_adapter_from_env_or_default(instance, *surface)
+        let adapter = wgpu::util::initialize_adapter_from_env_or_default(instance, surface)
             .await
             .expect("No suitable GPU adapters found on the system!");
 
@@ -227,9 +227,9 @@ pub(crate) async fn get_adapter_with_capabilities_or_from_env(
     instance: &wgpu::Instance,
     required_features: &wgpu::Features,
     required_downlevel_capabilities: &wgpu::DownlevelCapabilities,
-    surface: &Option<&wgpu::Surface<'_>>,
+    surface: Option<&wgpu::Surface<'_>>,
 ) -> wgpu::Adapter {
-    let adapter = wgpu::util::initialize_adapter_from_env_or_default(instance, *surface)
+    let adapter = wgpu::util::initialize_adapter_from_env_or_default(instance, surface)
         .await
         .expect("No suitable GPU adapters found on the system!");
 
